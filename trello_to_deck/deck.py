@@ -162,6 +162,6 @@ class DeckAPI:
     def attachToCard(self, boardId, stackId, cardId, fileName, fileObject, mimeType):
         self.postFiles(
             f"/index.php/apps/deck/api/v1.0/boards/{boardId}/stacks/{stackId}/cards/{cardId}/attachments",
-            {"type": "deck_file"},
+            {"type": "file"},
             {"file": (fileName, fileObject, mimeType)},
         )
